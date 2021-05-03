@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block title %}RESULTS{% endblock %} {% block body %}
+<div class="container table-responsive">
+	<h4 class="text-uppercase text-center my-3 p-3 border border-white border-4 rounded fw-bolder">Election Results</h4>
+	<table class="table table-bordered border-white text-center">
+		<thead>
+			<tr>
+				<th scope="col" class="tablecontent">Candidate ID</th>
+				<th scope="col" class="tablecontent">Candidate details</th>
+				<th scope="col" class="tablecontent">Votes</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for i in data %}
+			<tr>
+				<td class="tablecontent align-middle">{{ i[1] }}</td>
+				<td class="tablecontent align-middle">
+					<div class="d-flex justify-content-around">
+						<div class="card p-3 m-3" style="width: 20rem; background-color: #eee2dc">
+							<img
+								src="/static/Uploaded_images/{{i[3]}}"
+								height="155px"
+								width="105px"
+								class="card-img-top"
+								alt="candidate_logo"
+							/>
+							<div class="card-body">
+								<h5 class="card-title tablecontent">{{i[2]}}</h5>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td class="tablecontent align-middle">{{i[0]}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<h4 class="text-uppercase text-center my-3 p-3 border border-white border-4 rounded fw-bolder">
+		Winner is: {% for i in data1 %} | {{i[2]}} | {% endfor %}
+	</h4>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block title %}USER LOGIN{% endblock %} {% block body %}
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-sm-6">
+			<div class="card mt-5 p-5 border border-white border-4 rounded">
+				<h2 class="text-uppercase text-center my-3 p-3 border border-white border-4 rounded fw-bolder">
+					User Login
+				</h2>
+				<form method="POST" action="/login">
+					<div class="mb-3">
+						<label for="validationCustomUsername" class="form-label fw-bold">Username:</label>
+						<div class="input-group has-validation">
+							<span class="input-group-text" id="inputGroupPrepend">@</span>
+							<input
+								type="text"
+								name="username"
+								class="form-control"
+								id="validationCustomUsername"
+								aria-describedby="inputGroupPrepend"
+								required
+							/>
+						</div>
+					</div>
+					<div class="mb-1">
+						<label for="myinput2" class="form-label fw-bold">Password:</label>
+						<input type="password" class="form-control" id="myinput2" name="password" required />
+					</div>
+					<div class="mb-2">
+						<div class="row">
+							<div class="col-6">
+								<input type="checkbox" class="form-check-input mt-2" onclick="myFunction2()" id="hai" />
+								<label class="form-check-label mt-1 fw-bold" for="hai"> Show Password </label>
+							</div>
+							<div class="col-6 gclass" style="text-align: right">
+								<a href="fpass_user" class="fw-bold">Forgot password?</a>
+							</div>
+						</div>
+					</div>
+					<div class="container text-center">
+						<button class="btn btn-lg bttn mb-4 fw-bold" type="submit">SUBMIT</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body %}

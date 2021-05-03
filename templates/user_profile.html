@@ -1,0 +1,101 @@
+{% extends 'base.html' %} {% block title %}USER PROFILE{% endblock %} {% block body %}
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-sm-6">
+			<div class="card my-5 p-5 border border-white border-4 rounded">
+				<h4 class="text-uppercase text-center my-3 p-3 border border-white border-4 rounded fw-bolder">
+					Update Details
+				</h4>
+				<form
+					action="/profile_user/{{data['user_id']}}"
+					class="row g-3"
+					method="POST"
+					enctype="multipart/form-data"
+				>
+					<div class="col-md-12">
+						<label for="validationCustom01" class="form-label fw-bold">Name:</label>
+						<input
+							type="text"
+							class="form-control"
+							id="validationCustom01"
+							name="name"
+							value="{{data.name}}"
+							required
+						/>
+					</div>
+					<div class="col-md-12">
+						<label for="validationCustom02" class="form-label fw-bold">DOB:</label>
+						<input
+							type="date"
+							class="form-control"
+							id="validationCustom02"
+							name="dob"
+							value="{{data.dob}}"
+							required
+						/>
+					</div>
+					<div class="col-md-12">
+						<label for="validationCustom03" class="form-label fw-bold">Profile Image:</label>
+						<input type="file" class="form-control" id="validationCustom03" name="pimage" required />
+					</div>
+					<div class="col-md-12">
+						<label for="validationCustom04" class="form-label fw-bold">Email:</label>
+						<input
+							type="email"
+							class="form-control"
+							id="validationCustom04"
+							name="mail"
+							value="{{data.email}}"
+							required
+						/>
+					</div>
+					<div class="col-md-12">
+						<label for="validationCustom05" class="form-label fw-bold">Gender:</label>
+						<select
+							class="form-select"
+							id="validationCustom05"
+							name="gender"
+							value="{{data.gender}}"
+							required
+						>
+							<option selected disabled value="">Choose...</option>
+							<option>Male</option>
+							<option>Female</option>
+							<option>Intersex</option>
+						</select>
+					</div>
+					<div class="col-md-12">
+						<label for="validationCustom06" class="form-label fw-bold">Phone Number:</label>
+						<input
+							type="text"
+							class="form-control"
+							id="validationCustom06"
+							name="phno"
+							value="{{data.phno}}"
+							required
+						/>
+					</div>
+					<div class="col-md-12">
+						<label for="validationCustomUsername" class="form-label fw-bold">Username:</label>
+						<div class="input-group has-validation">
+							<span class="input-group-text" id="inputGroupPrepend">@</span>
+							<input
+								type="text"
+								name="username"
+								class="form-control"
+								id="validationCustomUsername"
+								value="{{data.username}}"
+								aria-describedby="inputGroupPrepend"
+								required
+							/>
+						</div>
+					</div>
+					<div class="container text-center">
+						<button class="btn btn-lg bttn my-3 fw-bold" type="submit">UPDATE</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body %}

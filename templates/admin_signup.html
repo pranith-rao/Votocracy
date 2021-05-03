@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block title %}ADMIN SIGNUP{% endblock %} {% block body %}
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-sm-6">
+			<div class="card my-5 p-5 border border-white border-4 rounded">
+				<h2 class="text-uppercase text-center my-3 p-3 border border-white border-4 rounded fw-bolder">
+					Admin Registration Form
+				</h2>
+				<form action="/register_admin" class="row g-3" method="POST">
+					<div class="col-md-12">
+						<label for="validationCustom01" class="form-label fw-bold">Secret Key:</label>
+						<input type="password" class="form-control" id="validationCustom01" name="key" required />
+					</div>
+					<div class="col-md-12">
+						<label for="validationCustom01" class="form-label fw-bold">Name:</label>
+						<input type="text" class="form-control" id="validationCustom01" name="name" required />
+					</div>
+					<div class="col-md-12">
+						<label for="validationCustom04" class="form-label fw-bold">Email:</label>
+						<input type="email" class="form-control" id="validationCustom04" name="mail" required />
+					</div>
+					<div class="col-md-12">
+						<label for="myInput" class="form-label fw-bold">Password:</label>
+						<button
+							class="btn-sm bttn ms-2"
+							data-bs-container="body"
+							data-bs-toggle="popover"
+							data-bs-placement="top"
+							data-bs-trigger="focus"
+							data-bs-content="Minimum lenght must be 8.
+							Must contain a capital letter.
+							Must contain a number.
+							Must contain symbol _ or @ or $.
+							Must not contain white spaces"
+							style="border: none"
+							type="button"
+						>
+							RULES
+						</button>
+						<input type="password" class="form-control" id="myinput3" name="pass" required />
+					</div>
+					<div class="col-md-12">
+						<input type="checkbox" class="form-check-input mt-2" onclick="myFunction3()" id="hai" />
+						<label class="form-check-label mt-1 fw-bold" for="hai"> Show Password </label>
+					</div>
+					<div class="container text-center">
+						<button class="btn btn-lg bttn mb-4 fw-bold" type="submit">REGISTER</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body %}

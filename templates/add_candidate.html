@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block title %}ADD CANDIDATE{% endblock %} {% block body %}
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-sm-6">
+			<div class="card my-5 p-5 border border-white border-4 rounded">
+				<h2 class="text-uppercase text-center my-3 p-3 border border-white border-4 rounded fw-bolder">
+					Candidate Registration Form
+				</h2>
+				<form action="candidate_add" class="row g-3" method="POST" enctype="multipart/form-data">
+					<div class="col-md-12">
+						<label for="validationCustom01" class="form-label fw-bold">Name:</label>
+						<input type="text" class="form-control" id="validationCustom01" name="name" required />
+					</div>
+					<div class="col-md-12">
+						<label for="validationCustom04" class="form-label fw-bold">Slogan:</label>
+						<input type="text" class="form-control" id="validationCustom04" name="slogan" required />
+					</div>
+					<div class="col-md-12">
+						<label for="myInput" class="form-label fw-bold">Party Logo/Image:</label>
+						<input type="file" class="form-control" name="logo" required />
+					</div>
+					<div class="container text-center">
+						<button class="btn btn-lg bttn my-3 fw-bold" type="submit">REGISTER</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body %}

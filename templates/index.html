@@ -1,0 +1,106 @@
+{% extends 'base.html' %} {% block title %}VOTING SITE{% endblock %} {% block body %}
+<div class="container mt-5">
+	<h2 class="text-center text-uppercase">Someone struggled for your right to vote.Use it</h2>
+	<div class="row">
+		<div class="col-md-6 mt-5 p-2">
+			<p class="lh-base fw-bold fs-5">
+				This website allows the users to cast their vote privately and easily from any location and on any
+				device with internet access(PC,tablet,smartphone,etc.), ensuring maximum election engagement by enabling
+				remote and disabled votes to participate on equal terms.<br /><br />
+				Voter privacy,election integrity,end-to-end scurity, vote correctness and full verifiability (individual
+				and universal) are guaranteed.
+			</p>
+		</div>
+		<div class="col-md-6">
+			<img src="../static/images/vote.jpg" alt="Please excercise your right to vote" class="yellow p-4" />
+		</div>
+	</div>
+</div>
+<h2 class="text-center mt-5 mb-5 text-uppercase">Candidates</h2>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+	<div class="carousel-inner">
+		{% for i in data %}
+		<div class="carousel-item {% if loop.index == 1 %} active {% endif %}">
+			<img src="/static/Uploaded_images/{{i['logo']}}" class="item d-block w-100 h-100" alt="candidate_{{i}}" />
+			<div class="carousel-caption d-md-block">
+				<p class="fw-bold fs-3">{{i['name']}}</p>
+				<p class="fw-bold fs-5">{{i['slogan']}}</p>
+			</div>
+		</div>
+		{% endfor %}
+		<button
+			class="carousel-control-prev"
+			type="button"
+			data-bs-target="#carouselExampleCaptions"
+			data-bs-slide="prev"
+		>
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button
+			class="carousel-control-next"
+			type="button"
+			data-bs-target="#carouselExampleCaptions"
+			data-bs-slide="next"
+		>
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+</div>
+<div id="contact">
+	<h2 class="text-uppercase text-center my-4">Contact us</h2>
+	<p class="text-center fw-bold w-responsive mx-2 mb-5 fs-5">
+		Do you have any questions? Contact us and our team will be happy to help within 2 business days.
+	</p>
+	<form action="https://postmail.invotes.com/send" method="post" id="email_form" class="container">
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label fw-bold">Email address:</label>
+			<input type="text" class="form-control" name="subject" placeholder="abc@example.com" />
+		</div>
+		<div class="mb-3">
+			<label for="exampleFormControlTextarea1" class="form-label fw-bold">Query/Message:</label>
+			<textarea class="form-control" name="text" placeholder="Message" rows="3"></textarea>
+		</div>
+		<input type="hidden" name="access_token" value="qxiwl923y7lzkuajmjyis688" />
+		<input type="hidden" name="success_url" value="https://www.google.com" />
+		<input type="hidden" name="error_url" value="https://www.google.com" />
+		<div class="d-grid gap-2 col-6 mx-auto">
+			<input class="btn btn-lg bttn mb-2" id="submit_form" type="submit" value="SEND" />
+		</div>
+	</form>
+</div>
+<script>
+	var submitButton = document.getElementById('submit_form');
+	var form = document.getElementById('email_form');
+	form.addEventListener('submit', function (e) {
+		setTimeout(function () {
+			submitButton.value = 'Sending...';
+			submitButton.disabled = true;
+		}, 1);
+	});
+</script>
+
+<footer class="container">
+	<div class="float-end">
+		<a href="#" class="fw-bold" style="text-decoration: none; color: #ac3b61"
+			><svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="25"
+				height="25"
+				fill="currentColor"
+				class="bi bi-arrow-up-circle-fill"
+				viewBox="0 0 16 16"
+			>
+				<path
+					d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"
+				/>
+			</svg>
+			BACK TO TOP</a
+		>
+	</div>
+	<p class="fw-bold"><img src="static/images/copyright.png" alt="copyright" /> Pranith</p>
+</footer>
+
+{% endblock body %}

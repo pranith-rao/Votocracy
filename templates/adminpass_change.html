@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block title %}PASSWORD RESET{% endblock %} {% block body %}
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-sm-6">
+			<div class="card my-5 p-5 border border-white border-4 rounded">
+				<h4 class="text-uppercase text-center my-3 p-3 border border-white border-4 rounded fw-bolder">
+					Password Reset
+				</h4>
+				<form action="/change_adminpass" class="row g-3" method="POST" enctype="multipart/form-data">
+					<div class="col-md-12">
+						<label for="myinput7" class="form-label fw-bold">New Password:</label>
+						<input type="password" class="form-control" id="myinput7" name="pass1" required />
+					</div>
+					<div class="col-md-12">
+						<label for="myinput8" class="form-label fw-bold">Re-Enter New Password:</label>
+						<input type="password" class="form-control" id="myinput8" name="pass2" required />
+					</div>
+					<div class="col-md-12">
+						<input type="checkbox" class="form-check-input" onclick="myFunction6()" id="hai" />
+						<label class="form-check-label fw-bold" for="hai"> Show Password </label>
+					</div>
+					<div class="container text-center">
+						<input type="hidden" value="{{data}}" name="admin_id" />
+						<button class="btn btn-lg bttn my-3 fw-bold" type="submit">RESET</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body %}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% block title %}ABOUT US{% endblock %} {% block body %}
+<div class="container fs-5">
+	<h2 class="text-uppercase text-center my-3 p-3 border border-white border-4 rounded fw-bolder">About us</h2>
+	<p>
+		This website allows you to exercise your right to vote by sitting at home or from a remote place. During this
+		pandemic the site helps you to cast vote by maintaining social distancing and staying at home following the main
+		motto of protection against corona 'STAY HOME STAY SAFE'. The website is user-friendly and has all the
+		authentication features making it reliable from both the user and admin end.If you have any queries feel free to
+		contact us using the form in the home page and we will get back to you in two days.
+	</p>
+	<br />
+	<h3 class="text-decoration-underline text-uppercase fw-bolder">Instructions for user:</h3>
+	<p>
+		<li>Click on Signup from the Signup/Login dropdown list and fill the form</li>
+		<li>
+			Make sure you use a unique username and mail id as each of them can be used by only one user.Same username
+			and mail id can't be used by two users
+		</li>
+		<li>
+			After filling the form click on register. If all the requirements are met you will get a success alert and
+			will be directed to the login page.Remember you need to be 18 years to register and cast your vote.
+		</li>
+		<li>Enter the username and password, the ones used while registering and click on login.</li>
+		<li>
+			On successfull login you will directed to the home page.CLick on 'Candidates' on the navbar to check the
+			candidates participating in the election
+		</li>
+		<li>
+			After deciding whom to vote, click on the vote button below your go-to candidate details and done.You have
+			successfully casted your vote.
+		</li>
+		<li>You even get the options to update the profile and change the password if necessary.</li>
+		<li>
+			Once everything is done click the dropdown list next to your name in the navbar and click on the logout
+			option to logout.
+		</li>
+	</p>
+	<br />
+	<h3 class="text-decoration-underline text-uppercase fw-bolder">Instructions for admin:</h3>
+	<p>
+		<li>Click on Signup from the Admin dropdown list and fill the form</li>
+		<li>
+			Secret key is the key provided by the company and make sure that a unique mail id is used as same mail id
+			cannot be used by two admins
+		</li>
+		<li>
+			On clicking register if all requirements are met you will be directed to the login page. Enter the details
+			and click login
+		</li>
+		<li>
+			On successfull login you will be directed to the home page where you will find options to add and update
+			candidates under the manage dropdown list, edit your profile,change password of your account and more
+			importantly view the results of the election under the droplist list near your name.
+		</li>
+		<li>
+			In update candidate option the admin can edit the details of the candidate and delete a candidate if they
+			decide to withdraw from the election
+		</li>
+		<li>
+			Once everything is done click the dropdown list next to your name in the navbar and click on the logout
+			option to logout.
+		</li>
+	</p>
+	<br />
+	<h2 class="text-uppercase text-center my-3 p-3 border border-white border-4 rounded fw-bolder">
+		Remember that your vote is precious and you vote the candidate who will be responsible and will work for his
+		people.
+	</h2>
+</div>
+
+{% endblock body %}

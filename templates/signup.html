@@ -1,0 +1,95 @@
+{% extends 'base.html' %} {% block title %}USER SIGNUP{% endblock %} {% block body %}
+<h2 class="text-center mt-5 mb-3 text-uppercase fw-bolder">Registration Form</h2>
+<div class="container">
+	<h4 class="text-uppercase text-center my-4 p-3 border border-white border-4 rounded fw-bolder">Personal Details</h4>
+	<form action="/register" class="row g-3" method="POST">
+		<div class="col-md-4">
+			<label for="validationCustom01" class="form-label fw-bold">Name:</label>
+			<input type="text" class="form-control" id="validationCustom01" name="name" required />
+		</div>
+		<div class="col-md-4">
+			<label for="validationCustom02" class="form-label fw-bold">DOB:</label>
+			<input type="date" class="form-control" id="validationCustom02" name="dob" max="2003-03-31" required />
+		</div>
+		<div class="col-md-4">
+			<label for="validationCustom03" class="form-label fw-bold">Profile Image:</label>
+			<input type="file" class="form-control" id="validationCustom03" name="pimage" required />
+		</div>
+		<div class="col-md-6">
+			<label for="validationCustom04" class="form-label fw-bold">Email:</label>
+			<input type="email" class="form-control" id="validationCustom04" name="mail" required />
+		</div>
+		<div class="col-md-3">
+			<label for="validationCustom05" class="form-label fw-bold">Gender:</label>
+			<select class="form-select" id="validationCustom05" name="gender" required>
+				<option selected disabled value="">Choose...</option>
+				<option>Male</option>
+				<option>Female</option>
+				<option>Intersex</option>
+			</select>
+		</div>
+		<div class="col-md-3">
+			<label for="validationCustom06" class="form-label fw-bold">Phone Number:</label>
+			<input
+				type="text"
+				class="form-control"
+				id="validationCustom06"
+				name="phno"
+				maxlength="10"
+				minlength="10"
+				required
+			/>
+		</div>
+		<div class="container">
+			<h4 class="text-uppercase text-center mt-4 p-3 border border-white border-4 rounded fw-bolder">
+				Login Details
+			</h4>
+		</div>
+		<div class="col-md-12">
+			<label for="validationCustomUsername" class="form-label fw-bold">Username:</label>
+			<div class="input-group has-validation">
+				<span class="input-group-text" id="inputGroupPrepend">@</span>
+				<input
+					type="text"
+					name="username"
+					class="form-control"
+					id="validationCustomUsername"
+					aria-describedby="inputGroupPrepend"
+					required
+				/>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<label for="myInput" class="form-label fw-bold">Password:</label>
+			<button
+				class="btn-sm bttn ms-2"
+				data-bs-container="body"
+				data-bs-toggle="popover"
+				data-bs-placement="top"
+				data-bs-trigger="focus"
+				data-bs-content="Minimum lenght must be 8.
+				Must contain a capital letter.
+				Must contain a number.
+				Must contain symbol _ or @ or $.
+				Must not contain white spaces"
+				style="border: none"
+				type="button"
+			>
+				RULES
+			</button>
+			<input type="password" class="form-control" id="myInput" name="pass1" required />
+			<input type="checkbox" class="form-check-input mt-2" onclick="myFunction()" id="hai" />
+			<label class="form-check-label mt-1 fw-bold" for="hai"> Show Password </label>
+		</div>
+		<div class="col-md-6">
+			<label for="myInput1" class="form-label fw-bold">Re-enter Password:</label>
+			<input type="password" class="form-control" id="myInput1" name="pass2" required />
+			<input type="checkbox" class="form-check-input mt-2" onclick="myFunction1()" id="hai1" />
+			<label class="form-check-label mt-1 fw-bold" for="hai1"> Show Password </label>
+		</div>
+		<div class="container text-center">
+			<button class="btn btn-lg bttn mb-4 fw-bold" type="submit">REGISTER</button>
+		</div>
+	</form>
+</div>
+{% endblock body %}

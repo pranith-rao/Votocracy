@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h3,
+h5 {
+	font-family: 'Poppins', sans-serif;
+}
+
+.yellow {
+	width: 550px;
+	height: 400px;
+}
+
+body,
+.card {
+	background-color: #edc7b7;
+	color: #ac3b61;
+	border: none;
+}
+
+header {
+	background-color: #eee2dc;
+}
+
+header a {
+	font-weight: bold;
+	color: #ac3b61;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+header a:hover {
+	color: #edc7b7;
+	background-color: #ac3b61;
+}
+
+.custom-toggler .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(172,59,97, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+	border-color: #ac3b61;
+}
+
+.carousel-item {
+	height: 600px;
+}
+
+.bttn {
+	background-color: #ac3b61;
+	color: #edc7b7;
+}
+
+.bttn:hover {
+	background-color: #eee2dc;
+	color: #ac3b61;
+}
+
+.bn {
+	background-color: #ac3b61;
+	color: #edc7b7;
+}
+
+.bn:hover {
+	color: #edc7b7;
+}
+
+.btttn {
+	background-color: #ac3b61;
+	color: #edc7b7;
+}
+
+.btttn:hover {
+	background-color: #edc7b7;
+	color: #ac3b61;
+}
+
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.tablecontent {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: large;
+	color: #ac3b61;
+}
+
+.zooom:hover {
+	animation: pulse;
+	animation-duration: 1s;
+}
+
+.gclass a {
+	text-decoration: none;
+	color: #ac3b61;
+}
+
+.gclass a:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+	.yellow {
+		width: 350px;
+		height: 350px;
+	}
+
+	.carousel-item {
+		height: 250px;
+	}
+}

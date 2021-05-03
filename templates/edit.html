@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block title %}UPDATE CANDIDATE{% endblock %} {% block body %}
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-sm-6">
+			<div class="card my-5 p-5 border border-white border-4 rounded">
+				<h2 class="text-uppercase text-center my-4">Update Candidate</h2>
+				<form
+					action="/update/{{data.candidate_id}}"
+					class="row g-3"
+					method="POST"
+					enctype="multipart/form-data"
+				>
+					<div class="col-md-12">
+						<label for="validationCustom01" class="form-label">Name</label>
+						<input
+							type="text"
+							class="form-control"
+							id="validationCustom01"
+							name="name"
+							value="{{data.name}}"
+							required
+						/>
+					</div>
+					<div class="col-md-12">
+						<label for="validationCustom04" class="form-label">Slogan</label>
+						<input
+							type="text"
+							class="form-control"
+							id="validationCustom04"
+							name="slogan"
+							value="{{data.slogan}}"
+							required
+						/>
+					</div>
+					<span style="color: red"
+						>Previous added image was {{data.logo}}. Either choose the same image or a different one if you
+						want to change.</span
+					>
+					<div class="col-md-12">
+						<label for="myInput" class="form-label">Party Logo/Image</label>
+						<input type="file" class="form-control" name="logo" required />
+					</div>
+					<div class="container text-center">
+						<button class="btn btn-lg bttn my-3" type="submit">UPDATE</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock body %}
