@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block title %}CANDIDATES{% endblock %} {% block body %}
 <div class="row row-cols-1 row-cols-md-3 g-2 text-center mx-2">
 	{% for i in data %}
-	<form action="/vote/{{i['candidate_id']}}" name="testForm2" method="POST">
+	<form action="/vote/{{i['candidate_id']}}" method="POST">
 		<div class="col">
 			<div class="card p-3 m-3 zooom" style="width: 20rem; background-color: #eee2dc; height: 22rem">
 				<img
@@ -18,28 +18,13 @@
 					<span class="btn bn disabled">VOTED</span>
 					{% else %}
 					<div class="text-center">
-						<button class="btn btttn fw-bold" onclick="showConfirm()" type="button">VOTE</button>
+						<button class="btn btttn fw-bold" type="button">VOTE</button>
 					</div>
 					{% endif %}
 				</div>
 			</div>
 		</div>
 	</form>
-	<script>
-		function showConfirm() {
-			Swal.fire({
-				title: 'Are you sure?',
-				showCancelButton: true,
-				confirmButtonColor: '#d33',
-				cancelButtonColor: '#3085d6',
-				confirmButtonText: 'Yes'
-			}).then(result => {
-				if (result.isConfirmed) {
-					document.testForm2.submit();
-				}
-			});
-		}
-	</script>
 	{% endfor %}
 </div>
 {% endblock body %}
