@@ -35,8 +35,8 @@
 						/>
 					</div>
 					<div class="col-md-12">
-						<label for="validationCustom03" class="form-label fw-bold">Profile Image:</label>
-						<input type="file" class="form-control" id="validationCustom03" name="pimage" required />
+						<label for="pimage" class="form-label fw-bold">Profile Image:</label>
+						<input type="file" class="form-control" id="pimage" name="pimage" required />
 					</div>
 					<div class="col-md-12">
 						<label for="validationCustom04" class="form-label fw-bold">Email:</label>
@@ -50,10 +50,10 @@
 						/>
 					</div>
 					<div class="col-md-12">
-						<label for="validationCustom05" class="form-label fw-bold">Gender:</label>
+						<label for="gender" class="form-label fw-bold">Gender:</label>
 						<select
 							class="form-select"
-							id="validationCustom05"
+							id="gender"
 							name="gender"
 							value="{{data.gender}}"
 							required
@@ -98,4 +98,7 @@
 		</div>
 	</div>
 </div>
+<script>
+	document.getElementById('gender').value = "{{data.gender}}";
+</script>
 {% endblock body %}

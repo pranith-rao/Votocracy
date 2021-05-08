@@ -58,10 +58,10 @@
 								<a class="nav-link" aria-current="page" href="/">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="about">About</a>
+								<a class="nav-link" href="/about">About</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="candidate">Candidates</a>
+								<a class="nav-link" href="/candidate">Candidates</a>
 							</li>
 							{% if 'admin' in session %}
 							<li class="nav-item dropdown">
@@ -76,8 +76,8 @@
 									Manage
 								</a>
 								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<li><a class="dropdown-item" href="add_candidate">Add Candidate</a></li>
-									<li><a class="dropdown-item" href="update_candidate">Update Candidate</a></li>
+									<li><a class="dropdown-item" href="/add_candidate">Add Candidate</a></li>
+									<li><a class="dropdown-item" href="/update_candidate">Update Candidate</a></li>
 								</ul>
 							</li>
 							<li class="nav-item dropdown">
@@ -93,15 +93,15 @@
 								</a>
 								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 									<li>
-										<a class="dropdown-item" href="admin_profile/{{session['admin_id']}}"
+										<a class="dropdown-item" href="/admin_profile/{{session['admin_id']}}"
 											>Edit Profile</a
 										>
 									</li>
 									<li>
-										<a class="dropdown-item" href="result">View Results</a>
+										<a class="dropdown-item" href="/result">View Results</a>
 									</li>
-									<li><a class="dropdown-item" href="admin_pass">Change Password</a></li>
-									<li><a class="dropdown-item" href="logout">Logout</a></li>
+									<li><a class="dropdown-item" href="/admin_pass">Change Password</a></li>
+									<li><a class="dropdown-item" href="/logout">Logout</a></li>
 								</ul>
 							</li>
 							{% elif 'user' in session %}
@@ -118,15 +118,15 @@
 								</a>
 								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 									<li>
-										<a class="dropdown-item" href="user_profile/{{session['user_id']}}"
+										<a class="dropdown-item" href="/user_profile/{{session['user_id']}}"
 											>Edit Profile</a
 										>
 									</li>
 									<li>
-										<a class="dropdown-item" href="change_pass">Change Password</a>
+										<a class="dropdown-item" href="/change_pass">Change Password</a>
 									</li>
 
-									<li><a class="dropdown-item" href="logout">Logout</a></li>
+									<li><a class="dropdown-item" href="/logout">Logout</a></li>
 								</ul>
 							</li>
 							{% else %}
@@ -142,8 +142,8 @@
 									SignUp/Login
 								</a>
 								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<li><a class="dropdown-item" href="register_form">SignUp</a></li>
-									<li><a class="dropdown-item" href="login_form">Login</a></li>
+									<li><a class="dropdown-item" href="/register_form">SignUp</a></li>
+									<li><a class="dropdown-item" href="/login_form">Login</a></li>
 								</ul>
 							</li>
 							<li class="nav-item dropdown">
@@ -158,8 +158,8 @@
 									Admin
 								</a>
 								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<li><a class="dropdown-item" href="admin_register">SignUp</a></li>
-									<li><a class="dropdown-item" href="admin_login">Login</a></li>
+									<li><a class="dropdown-item" href="/admin_register">SignUp</a></li>
+									<li><a class="dropdown-item" href="/admin_login">Login</a></li>
 								</ul>
 							</li>
 							{% endif %}
