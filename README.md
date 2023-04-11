@@ -1,4 +1,4 @@
-# Vote!
+# Votocracy
 This website is an online platform that allows users to vote on various topics or issues. Users can register and access a list of voting options, choose their preferred option, and submit their vote. It provides a convenient and accessible way for people to participate in democratic decision-making processes.
 
 To have a glimpse on how this website works watch this https://www.youtube.com/watch?v=cJN9HYrEWTY
